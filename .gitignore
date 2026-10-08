@@ -1,1 +1,3 @@
-"Axial_UNFREEZE_KFold_1.pth`n__pycache__/`n*.pyc" | Out-File -Encoding utf8 
+Axial_UNFREEZE_KFold_1.pth
+__pycache__/
+*.pyc

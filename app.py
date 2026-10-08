@@ -7,6 +7,7 @@ import torchvision.models as models
 import numpy as np
 from PIL import Image
 import plotly.graph_objects as go
+import gdown
 
 # ==============================================================================
 # 1. KONFIGURASI HALAMAN
@@ -57,6 +58,11 @@ KELAS_WARNA = {
     "LMCI": "#F97316"
 }
 
+model_path = "Axial_UNFREEZE_KFold_1.pth"
+if not os.path.isfile(model_path):
+    with st.spinner("Sedang mengunduh model dari Cloud (hanya dilakukan sekali)..."):
+        url_drive = "https://drive.google.com/file/d/1F2FRjvOgJu7s-2Tp03QAJjqmUDe1_ety/view?usp=sharing"
+        gdown.download(url_drive, model_path, quiet=False, fuzzy=True)
 # ==============================================================================
 # 2. DEFINISI MODEL (Sesuai Pelatihan)
 # ==============================================================================
