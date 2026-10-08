@@ -61,8 +61,8 @@ KELAS_WARNA = {
 model_path = "Axial_UNFREEZE_KFold_1.pth"
 if not os.path.isfile(model_path):
     with st.spinner("Sedang mengunduh model dari Cloud (hanya dilakukan sekali)..."):
-        url_drive = "https://drive.google.com/file/d/1F2FRjvOgJu7s-2Tp03QAJjqmUDe1_ety/view?usp=sharing"
-        gdown.download(url_drive, model_path, quiet=False, fuzzy=True)
+        drive_file_id = "1F2FRjvOgJu7s-2Tp03QAJjqmUDe1_ety"
+        gdown.download(id=drive_file_id, output=model_path, quiet=False)
 # ==============================================================================
 # 2. DEFINISI MODEL (Sesuai Pelatihan)
 # ==============================================================================
